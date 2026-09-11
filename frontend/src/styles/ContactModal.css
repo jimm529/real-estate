@@ -1,0 +1,305 @@
+/* Contact Modal Overlay Backdrop */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Dark Modal Card Container */
+.contact-modal-dialog {
+  background-color: #0f172a;
+  color: #f8fafc;
+  width: 100%;
+  max-width: 480px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+  animation: slideUp 0.25s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(16px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Modal Header */
+.contact-modal-header {
+  padding: 1.35rem 1.5rem 1rem;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #0f172a;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.modal-title-custom {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.modal-property-subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  display: block;
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.modal-property-subtitle strong {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.btn-close-custom {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.btn-close-custom:hover {
+  color: #ffffff;
+  background-color: #1e293b;
+}
+
+/* Modal Body */
+.contact-modal-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+/* Step Progress Indicator */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.step-indicator .step-badge {
+  background-color: #1e293b;
+  color: #94a3b8;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.step-indicator .step-badge.active {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+/* Form Groups */
+.form-group-custom {
+  margin-bottom: 1.25rem;
+}
+
+.form-group-custom label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 0.4rem;
+}
+
+.form-control-dark {
+  width: 100%;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.95rem;
+  transition: all 0.15s ease;
+}
+
+.form-control-dark:focus {
+  background-color: #1e293b;
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+  color: #ffffff;
+}
+
+.form-control-dark.is-invalid {
+  border-color: #ef4444;
+}
+
+.validation-error-text {
+  color: #f87171;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* react-phone-input-2 dark theme overrides */
+.phone-input-container-dark .form-control {
+  width: 100% !important;
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  height: 44px !important;
+  font-size: 0.95rem !important;
+}
+
+.phone-input-container-dark .form-control:focus {
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25) !important;
+}
+
+.phone-input-container-dark .flag-dropdown {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px 0 0 8px !important;
+}
+
+.phone-input-container-dark .selected-flag:hover,
+.phone-input-container-dark .selected-flag:focus {
+  background-color: #334155 !important;
+}
+
+.phone-input-container-dark .country-list {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+}
+
+.phone-input-container-dark .country-list .country:hover,
+.phone-input-container-dark .country-list .country.highlight {
+  background-color: #1e293b !important;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn-modal-primary {
+  flex: 1;
+  background-color: #0d6efd;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  min-height: 44px;
+  transition: background-color 0.15s ease;
+}
+
+.btn-modal-primary:hover:not(:disabled) {
+  background-color: #0b5ed7;
+}
+
+.btn-modal-primary:disabled {
+  background-color: #334155;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.btn-modal-secondary {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-weight: 500;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  min-height: 44px;
+  transition: all 0.15s ease;
+}
+
+.btn-modal-secondary:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+/* Success Step 3 */
+.success-container {
+  text-align: center;
+  padding: 1.25rem 0.25rem;
+}
+
+.success-icon {
+  width: 58px;
+  height: 58px;
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.success-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.success-message {
+  font-size: 0.925rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.success-message strong {
+  color: #f8fafc;
+}
